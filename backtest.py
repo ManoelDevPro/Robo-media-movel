@@ -4,13 +4,13 @@ import pandas as pd
 # ===== AQUI VOCÊ TESTA O QUE QUISER =====
 SYMBOL = "EURUSD"
 TIMEFRAME = mt5.TIMEFRAME_H4  # <--- TROCA AQUI: M15, M30, H1, H4, D1
-DIAS = 120  # quantos dias pra trás você quer testar
+DIAS = 30  # quantos dias pra trás você quer testar
 PERIODO_CURTA = 10 # período da média curta
 PERIODO_LONGA = 35 # período da média longa
-ALVO_PONTOS = 210 # pontos de alvo
+ALVO_PONTOS = 250 # pontos de alvo
 STOP_PONTOS = 105 # pontos de stop
-LOTE = 0.10 # lote da operação
-CAPITAL_INICIAL = 10000.0 
+LOTE = 0.01 # lote da operação
+CAPITAL_INICIAL = 100.0 
 # ========================================
 
 if not mt5.initialize():
