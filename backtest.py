@@ -1,15 +1,14 @@
 import MetaTrader5 as mt5
 import pandas as pd
-#import matplotlib.pyplot as plt
 
 # ===== AQUI VOCÊ TESTA O QUE QUISER =====
 SYMBOL = "EURUSD"
 TIMEFRAME = mt5.TIMEFRAME_H4  # <--- TROCA AQUI: M15, M30, H1, H4, D1
 DIAS = 120  # quantos dias pra trás você quer testar
-PERIODO_CURTA = 10
-PERIODO_LONGA = 35
-ALVO_PONTOS = 210
-STOP_PONTOS = 105
+PERIODO_CURTA = 10 # período da média curta
+PERIODO_LONGA = 35 # período da média longa
+ALVO_PONTOS = 210 # pontos de alvo
+STOP_PONTOS = 105 # pontos de stop
 LOTE = 1.0
 CAPITAL_INICIAL = 10000.0
 # ========================================
@@ -145,14 +144,3 @@ print(f"Lucro/Prejuízo:  ${lucro_total:.2f} ({lucro_total/CAPITAL_INICIAL*100:.
 print(f"Trades: {trades} | Wins: {wins} | Losses: {losses} | Win Rate: {win_rate:.1f}%")
 print(f"Maior Drawdown: ${maior_drawdown:.2f}")
 print("="*40)
-
-# Gráfico
-#plt.figure(figsize=(10,4))
-#plt.plot(curva, color='#1a73e8', linewidth=1.5)
-#plt.axhline(CAPITAL_INICIAL, color='gray', linestyle='--')
-#plt.title(f'Backtest {SYMBOL} - Media {PERIODO_CURTA}x{PERIODO_LONGA} - Alvo {ALVO_PONTOS} / Stop {STOP_PONTOS}')
-#plt.xlabel('Velas')
-#plt.ylabel('Saldo ($)')
-#plt.grid(alpha=0.3)
-#plt.tight_layout()
-#plt.show()
