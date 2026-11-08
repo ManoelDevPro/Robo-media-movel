@@ -9,8 +9,8 @@ PERIODO_CURTA = 10 # período da média curta
 PERIODO_LONGA = 35 # período da média longa
 ALVO_PONTOS = 210 # pontos de alvo
 STOP_PONTOS = 105 # pontos de stop
-LOTE = 1.0
-CAPITAL_INICIAL = 10000.0
+LOTE = 0.10 # lote da operação
+CAPITAL_INICIAL = 10000.0 
 # ========================================
 
 if not mt5.initialize():
